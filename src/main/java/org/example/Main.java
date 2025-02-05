@@ -7,7 +7,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Bank bank = new Bank("National Bank");
 
-        // Adding some branches
         Branch lahoreBranch = new Branch("Lahore Branch", "Lahore");
         Branch karachiBranch = new Branch("Karachi Branch", "Karachi");
         bank.addBranch(lahoreBranch);
@@ -26,10 +25,9 @@ public class Main {
             System.out.print("Enter your choice: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine();
 
             if (choice == 1) {
-                // Register a new customer
                 System.out.println("Available Branches: Lahore Branch, Karachi Branch");
                 System.out.print("Enter branch name: ");
                 String branchName = scanner.nextLine();
@@ -53,7 +51,6 @@ public class Main {
                 }
 
             } else if (choice == 2) {
-                // Open an account
                 System.out.print("Enter branch name: ");
                 String branchName = scanner.nextLine();
                 Branch branch = bank.findBranchByName(branchName);
@@ -75,7 +72,6 @@ public class Main {
                 }
 
             } else if (choice == 3) {
-                // Deposit money
                 System.out.print("Enter branch name: ");
                 String branchName = scanner.nextLine();
                 Branch branch = bank.findBranchByName(branchName);
@@ -98,7 +94,6 @@ public class Main {
                 }
 
             } else if (choice == 4) {
-                // View customer details
                 System.out.print("Enter branch name: ");
                 String branchName = scanner.nextLine();
                 Branch branch = bank.findBranchByName(branchName);
@@ -118,7 +113,6 @@ public class Main {
                 }
 
             } else if (choice == 5) {
-                // Show branch details
                 System.out.print("Enter branch name: ");
                 String branchName = scanner.nextLine();
                 Branch branch = bank.findBranchByName(branchName);
